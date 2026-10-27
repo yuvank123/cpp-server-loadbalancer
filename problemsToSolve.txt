@@ -1,0 +1,5 @@
+Partial HTTP reads: don't assume one recv() receives the entire request.
+Correct response handling: don't wait forever for a backend to close its connection.
+Timeouts: prevent stalled backends from blocking a worker indefinitely.
+Backend health: stop routing new requests to failed servers and restore recovered ones.
+Concurrency limits: replace unlimited detached threads with a bounded worker pool.
